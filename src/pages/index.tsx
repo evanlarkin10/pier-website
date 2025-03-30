@@ -1,10 +1,7 @@
 import Metadata from "@/components/Metadata";
 import Carousel from "@/components/Carousel";
-import Button from "@/components/Button";
-import Text from "@/components/Text";
 import Rooms from "@/sections/landing/Rooms";
 import MoreOptions from "@/sections/landing/MoreOptions";
-import { WEBREZ_BOOKING_URL } from "@/utils/constants";
 
 export default function Home() {
   return (
