@@ -47,11 +47,17 @@ const Carousel = ({
               text-white text-5xl font-bold text-center z-[1] transition-opacity duration-1000
               ${index === currentSlide ? "opacity-100" : "opacity-0"}`}
           >
-            <Text variant="h1" additionalClasses="text-white">
+            <Text
+              variant="h1"
+              additionalClasses="text-white font-notoSerif drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]"
+            >
               {slide.title}
             </Text>
             {slide.subtitle && (
-              <Text variant="h2" additionalClasses="text-white !font-inter">
+              <Text
+                variant="h3"
+                additionalClasses="text-white !font-inter drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]"
+              >
                 {slide.subtitle}
               </Text>
             )}

@@ -3,6 +3,7 @@ import Metadata from "@/components/Metadata";
 import RoomDisplayStacked from "@/components/RoomDisplay/StackedRoomDisplay";
 import Button from "@/components/Button";
 import { WEBREZ_BOOKING_URL } from "@/utils/constants";
+import LetterText from "@/components/Headers/LetterText";
 
 export default function GolfPackages() {
   return (
@@ -14,13 +15,10 @@ export default function GolfPackages() {
       />
       <PageLayout>
         <div className="flex flex-col lg:!flex-row items-center lg:items-start">
-          <div className="flex-[1] bg-white px-10 items-center justify-center">
-            <span className="relative text-[200px] md:text-[250px] lg:text-[300px]">
-              A
-              <div className="bg-[#FFF] text-center absolute top-[calc(50%-10px)] w-full px-[0] py-[10px] text-[20px]">
-                ACCOMMODATION
-              </div>
-            </span>
+          <div className="flex flex-col items-center">
+            <div className="flex-[1] bg-white px-10 items-center justify-center">
+              <LetterText text="ACCOMODATIONS" letter="A" />
+            </div>
             <Button
               variant="solid"
               color="primary"

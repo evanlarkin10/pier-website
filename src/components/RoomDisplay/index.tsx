@@ -46,7 +46,7 @@ const RoomDisplay = ({
         alt={room_type}
         height={room_image_height}
         width={room_image_width}
-        className="flex flex-[1] object-contain"
+        className="flex flex-[1] object-contain shadow-xl"
         draggable={false}
       />
     </div>

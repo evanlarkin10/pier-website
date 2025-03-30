@@ -3,6 +3,7 @@ import Image from "next/image";
 import Text from "@/components/Text";
 import Metadata from "@/components/Metadata";
 import Button from "@/components/Button";
+import LetterText from "@/components/Headers/LetterText";
 
 export default function ContactUs() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -35,14 +36,9 @@ export default function ContactUs() {
           </div>
           <div className="flex flex-col flex-[1] text-left px-80">
             <div>
-              <span className="relative text-[200px] md:text-[250px] lg:text-[300px] leading-[210px]">
-                C
-                <div className="bg-[#FFF] text-center absolute top-[calc(50%-15px)] w-full px-[0] py-[10px] text-[20px] leading-4">
-                  Contact Us
-                </div>
-              </span>
+              <LetterText text="CONTACT US" letter="C" />
             </div>
-            <div className="flex flex-col gap-4 py-10">
+            <div className="flex flex-col gap-4">
               <Text variant="p">Contact us for more information</Text>
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                 <input

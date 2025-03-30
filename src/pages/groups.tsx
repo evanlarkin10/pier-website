@@ -3,6 +3,7 @@ import Image from "next/image";
 import Text from "@/components/Text";
 import Metadata from "@/components/Metadata";
 import BulletList from "@/components/BulletList";
+import LetterText from "@/components/Headers/LetterText";
 
 export default function GolfPackages() {
   return (
@@ -15,12 +16,7 @@ export default function GolfPackages() {
       <PageLayout>
         <div className="flex flex-col lg:!flex-row items-center lg:items-start">
           <div className="flex-[1] bg-white px-10 items-center justify-center">
-            <span className="relative text-[200px] md:text-[250px] lg:text-[300px]">
-              G
-              <div className="bg-[#FFF] text-center absolute top-[calc(50%-10px)] w-full px-[0] py-[10px] text-[20px]">
-                GROUPS & MEETINGS
-              </div>
-            </span>
+            <LetterText text="GROUPS & MEETINGS" letter="G" />
           </div>
           <div className="flex flex-col flex-[5] bg-white gap-[20px]">
             <Image

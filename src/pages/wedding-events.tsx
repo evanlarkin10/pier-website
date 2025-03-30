@@ -2,6 +2,7 @@ import PageLayout from "@/components/Layouts/PageLayout";
 import Image from "next/image";
 import Text from "@/components/Text";
 import Metadata from "@/components/Metadata";
+import LetterText from "@/components/Headers/LetterText";
 
 export default function WeddingEvents() {
   return (
@@ -14,12 +15,7 @@ export default function WeddingEvents() {
       <PageLayout>
         <div className="flex flex-col lg:!flex-row items-center lg:items-start">
           <div className="flex-[1] bg-white px-10 items-center justify-center">
-            <span className="relative text-[200px] md:text-[250px] lg:text-[300px]">
-              W
-              <div className="bg-[#FFF] text-center absolute top-[calc(50%-20px)] sm:top-[calc(50%-10px)] w-full px-[0] py-[10px] text-[20px]">
-                WEDDINGS & EVENTS
-              </div>
-            </span>
+            <LetterText text="WEDDING & EVENTS" letter="W" />
           </div>
           <div className="flex flex-col flex-[5] bg-white gap-[20px]">
             <Image
