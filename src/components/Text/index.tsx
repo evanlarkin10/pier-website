@@ -10,6 +10,7 @@ const text = tv({
       h3: "text-primary text-2xl md:text-3xl lg:text-4xl font-montserrat",
       h4: "text-primary text-xl md:text-2xl lg:text-3xl font-montserrat",
       p: "text-primary text-base font-inter",
+      link: "text-secondary underline text-base font-inter cursor-pointer",
     },
   },
   defaultVariants: {
@@ -24,7 +25,7 @@ const Text = ({
   additionalClasses,
 }: {
   children: React.ReactNode;
-  variant: "h1" | "h2" | "h3" | "h4" | "p";
+  variant: "h1" | "h2" | "h3" | "h4" | "p" | "link";
   tag?: string;
   additionalClasses?: string;
 }) => {

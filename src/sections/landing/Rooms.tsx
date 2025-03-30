@@ -1,3 +1,4 @@
+import BulletList from "@/components/BulletList";
 import RoomDisplay from "@/components/RoomDisplay";
 import Text from "@/components/Text";
 
@@ -5,7 +6,7 @@ const Rooms = () => {
   return (
     <div className="bg-white flex flex-col lg:!flex-row">
       <div className="flex flex-[1] min-w-[400px] bg-white">
-        <div className="px-10">
+        <div className="flex flex-col px-10 py-10 gap-10">
           <Text variant="h4">WHY INN AT THE PIER?</Text>
           <Text variant="p">
             Explore the core of Prince Edward Island and the central hub of its
@@ -22,15 +23,26 @@ const Rooms = () => {
             you in recalling the elements that hold genuine significance in your
             life.
           </Text>
+          <BulletList
+            items={[
+              "Comfortable Stays",
+              "Restaurant",
+              "Bar",
+              "Water Sports",
+              "24h Parking & Security",
+              "Treaking",
+            ]}
+          />
         </div>
       </div>
-      <div className="flex flex-[3] flex-col bg-foreground">
+      <div className="flex flex-[3] flex-col bg-foreground items-start justify-start">
         <RoomDisplay
           room_image="/standard-room.webp"
           room_description="Our standard rooms have queen beds, they are not located on the waterfront side of the Inn. All our rooms have a private bath, Hair dryer, mini fridge, smart T.V with cable, mini-split heat/AC and free WiFi."
           room_type="Standard Room"
           room_image_height={227}
           room_image_width={369}
+          link={"/standard-room"}
         />
         <RoomDisplay
           room_image="/standard-plus-room.webp"
@@ -39,6 +51,7 @@ const Rooms = () => {
           room_image_height={227}
           room_image_width={369}
           invert_order={true}
+          link={"/standard-plus-room"}
         />
         <RoomDisplay
           room_image="/junior-suites-room.webp"
@@ -46,6 +59,7 @@ const Rooms = () => {
           room_type="Junior Suite"
           room_image_height={227}
           room_image_width={369}
+          link={"/junior-suite-room"}
         />
         <RoomDisplay
           room_image="/suites-room.webp"
@@ -54,6 +68,7 @@ const Rooms = () => {
           room_image_height={227}
           room_image_width={369}
           invert_order={true}
+          link={"/suite-room"}
         />
         <RoomDisplay
           room_image="/double-bed-room.webp"
@@ -61,6 +76,7 @@ const Rooms = () => {
           room_type="Double Bed Room"
           room_image_height={227}
           room_image_width={369}
+          link={"/double-room"}
         />
       </div>
     </div>

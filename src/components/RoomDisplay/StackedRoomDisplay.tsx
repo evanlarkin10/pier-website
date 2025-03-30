@@ -1,14 +1,14 @@
 import Text from "@/components/Text";
 import { useNavigate } from "@/utils/useNavigate";
 import Image from "next/image";
+import Button from "@/components/Button";
 
-const RoomDisplay = ({
+const RoomDisplayStacked = ({
   room_type,
   room_description,
   room_image,
   room_image_height,
   room_image_width,
-  invert_order = false,
   link,
 }: {
   room_type: string;
@@ -21,35 +21,30 @@ const RoomDisplay = ({
 }) => {
   const navigate = useNavigate();
   return (
-    <div
-      className={`bg-white flex ${
-        invert_order
-          ? "flex-col-reverse md:!flex-row-reverse"
-          : "flex-col md:!flex-row"
-      } p-10 m-10 gap-4`}
-    >
+    <div className={`bg-white flex flex-col p-10 gap-4 max-w-[450px]`}>
       <div className="flex flex-[1] flex-col justify-between h-full">
         <div className="flex flex-col gap-4">
+          <Image
+            src={room_image}
+            alt={room_type}
+            height={room_image_height}
+            width={room_image_width}
+            className="flex flex-[1] object-contain"
+            draggable={false}
+          />
           <Text variant="h3">{room_type}</Text>
           <Text variant="p">{room_description}</Text>
         </div>
-        <span
+        <Button
+          color="secondary"
+          variant="outlined"
           onClick={() => {
             if (link) navigate(link);
           }}
-        >
-          <Text variant="link">See More</Text>
-        </span>
+          text="See Details"
+        />
       </div>
-      <Image
-        src={room_image}
-        alt={room_type}
-        height={room_image_height}
-        width={room_image_width}
-        className="flex flex-[1] object-contain"
-        draggable={false}
-      />
     </div>
   );
 };
-export default RoomDisplay;
+export default RoomDisplayStacked;

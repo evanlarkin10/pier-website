@@ -2,28 +2,13 @@ import Image from "next/image";
 import { Fragment, useEffect, useState } from "react";
 import Button from "@/components/Button";
 import Text from "@/components/Text";
+import { WEBREZ_BOOKING_URL } from "@/utils/constants";
 
-const slides = [
-  {
-    id: 1,
-    image: "/slide-1.webp",
-    title: "RESTAURANT ON-SITE",
-  },
-  {
-    id: 2,
-    image: "/slide-2.webp",
-    title: "YOUR ISLAND ESCAPE IS WAITING",
-    subtitle: "Perfect for couples",
-  },
-  {
-    id: 3,
-    image: "/slide-3.webp",
-    title: "PACKAGES",
-    subtitle: "For Romance & Golf",
-  },
-];
-
-const Carousel = () => {
+const Carousel = ({
+  slides,
+}: {
+  slides: { id: number; image: string; title: string; subtitle?: string }[];
+}) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -74,7 +59,13 @@ const Carousel = () => {
         </Fragment>
       ))}
       <div className="absolute bottom-64 left-1/2 transform -translate-x-1/2">
-        <Button size="lg" color="tertiary" variant="solid" text="Book Now" />
+        <Button
+          size="lg"
+          color="tertiary"
+          variant="solid"
+          text="Book Now"
+          onClick={() => window.open(WEBREZ_BOOKING_URL, "_blank")}
+        />
       </div>
       {/* Navigation Buttons */}
       <div className="absolute bottom-4 right-4 flex gap-2">

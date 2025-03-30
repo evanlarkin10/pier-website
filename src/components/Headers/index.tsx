@@ -6,6 +6,7 @@ interface HeaderProps {}
 
 export default function Header({}: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
   const navigate = useNavigate();
 
@@ -19,24 +20,24 @@ export default function Header({}: HeaderProps) {
       href: "/packages",
       text: "Packages",
       subMenu: [
-        { href: "/packages/golf", text: "Cavendish Beach Golf" },
-        { href: "/packages/romance", text: "PEI Romance Packages" },
-        { href: "/packages/weddings", text: "Weddings & Events" },
+        { href: "/golf-packages", text: "Cavendish Beach Golf" },
+        { href: "/romance-packages", text: "PEI Romance Packages" },
+        { href: "/wedding-events", text: "Weddings & Events" },
       ],
     },
     {
-      href: "/accommodation",
+      href: "/rooms",
       text: "Accommodation",
       subMenu: [
-        { href: "/accommodation/rooms", text: "Rooms & Suites" },
-        { href: "/accommodation/amenities", text: "Groups & Meetings" },
+        { href: "/rooms", text: "Rooms & Suites" },
+        { href: "/groups", text: "Groups & Meetings" },
       ],
     },
     {
-      href: "/dining-entertainment",
-      text: "Dining & Entertainment",
+      href: "https://islandchefatthepier.ca/",
+      text: "Dining",
     },
-    { href: "/enquiry", text: "Enquiry" },
+    { href: "/contact", text: "Contact" },
   ];
 
   return (
@@ -135,11 +136,70 @@ export default function Header({}: HeaderProps) {
               <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
           </button>
-          {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="text-white py-2">
-              {link.text}
-            </a>
-          ))}
+
+          {activeSubmenu ? (
+            <div className="w-full">
+              <button
+                className="text-white py-2 px-4 flex items-center"
+                onClick={() => setActiveSubmenu(null)}
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  className="mr-2"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+                Back
+              </button>
+              {navLinks
+                .find((link) => link.href === activeSubmenu)
+                ?.subMenu?.map((subItem) => (
+                  <a
+                    key={subItem.href}
+                    href={subItem.href}
+                    className="text-white py-2 px-8 block hover:bg-primary-dark"
+                  >
+                    {subItem.text}
+                  </a>
+                ))}
+            </div>
+          ) : (
+            navLinks.map((link) => (
+              <div key={link.href} className="w-full text-center">
+                {link.subMenu ? (
+                  <button
+                    onClick={() => setActiveSubmenu(link.href)}
+                    className="text-white py-2 w-full hover:bg-primary-dark flex items-center justify-center"
+                  >
+                    {link.text}
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      className="ml-2"
+                    >
+                      <path d="M9 18l6-6-6-6" />
+                    </svg>
+                  </button>
+                ) : (
+                  <a
+                    href={link.href}
+                    className="text-white py-2 block hover:bg-primary-dark"
+                  >
+                    {link.text}
+                  </a>
+                )}
+              </div>
+            ))
+          )}
         </nav>
       )}
     </header>
