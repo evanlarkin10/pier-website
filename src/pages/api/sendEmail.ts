@@ -67,6 +67,6 @@ export default async function handler(
     console.error(error);
     return res
       .status(500)
-      .json({ success: false, message: "Email failed to send." });
+      .json({ success: false, message: "Email failed to send." + error });
   }
 }
