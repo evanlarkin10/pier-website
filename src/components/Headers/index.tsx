@@ -21,7 +21,8 @@ export default function Header({}: HeaderProps) {
       text: "Packages",
       subMenu: [
         { href: "/golf-packages", text: "Cavendish Beach Golf" },
-        { href: "/romance-packages", text: "PEI Romance Packages" },
+        { href: "/romance-packages", text: "Romance Packages" },
+        { href: "/anne-of-green-gables", text: "Anne of Green Gables" },
         { href: "/wedding-events", text: "Weddings & Events" },
       ],
     },

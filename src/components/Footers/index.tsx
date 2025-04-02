@@ -13,15 +13,41 @@ export default function Footer({}: FooterProps) {
           >
             INN AT THE PIER
           </Text>
-          <Text variant="p" tag="span" additionalClasses="text-secondary">
-            9796 Cavendish Road
-          </Text>
-          <Text variant="p" tag="span" additionalClasses="text-secondary">
-            PEI, Canada
-          </Text>
-          <Text variant="p" tag="span" additionalClasses="text-secondary">
-            C0A 1E0
-          </Text>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=9796+Cavendish+Road+PEI+Canada+C0A+1N0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-col"
+          >
+            <Text
+              variant="p"
+              tag="span"
+              additionalClasses="text-secondary group-hover:underline"
+            >
+              9796 Cavendish Road
+            </Text>
+            <Text
+              variant="p"
+              tag="span"
+              additionalClasses="text-secondary group-hover:underline"
+            >
+              PEI, Canada
+            </Text>
+            <Text
+              variant="p"
+              tag="span"
+              additionalClasses="text-secondary group-hover:underline"
+            >
+              C0A 1N0
+            </Text>
+            <Text
+              variant="p"
+              tag="span"
+              additionalClasses="text-secondary text-sm italic"
+            >
+              (Click to view in Maps)
+            </Text>
+          </a>
         </div>
         <div className="flex flex-col flex-[1] px-10">
           <Text
@@ -34,9 +60,14 @@ export default function Footer({}: FooterProps) {
           <Text variant="p" additionalClasses="text-secondary">
             TELEPHONE: 902-886-3126
           </Text>
-          <Text variant="p" additionalClasses="text-secondary">
-            RESERVATIONS: 902-886-3126
-          </Text>
+          <a href="mailto:info@innatthepier.com" className="group">
+            <Text
+              variant="p"
+              additionalClasses="text-secondary group-hover:underline"
+            >
+              EMAIL: info@innatthepier.com
+            </Text>
+          </a>
         </div>
       </div>
 

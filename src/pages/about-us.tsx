@@ -23,7 +23,7 @@ export default function AboutUs() {
               alt="Aerial Shot"
               height={350}
               width={850}
-              className="object-contain"
+              className="w-full max-h-[450px] object-cover"
             />
             <div>
               <Text variant="p">
@@ -83,7 +83,7 @@ export default function AboutUs() {
                   alt="Kayaking Image"
                   height={1000}
                   width={1500}
-                  className="object-contain flex-[1]"
+                  className="object-contain flex-[1] shadow-lg rounded-lg"
                 />
               </div>
               <div className="flex-[1]">
@@ -92,7 +92,7 @@ export default function AboutUs() {
                   alt="Paddleboard Image"
                   height={1000}
                   width={1500}
-                  className="object-contain flex-[1]"
+                  className="object-contain flex-[1] shadow-lg rounded-lg"
                 />
               </div>
             </div>

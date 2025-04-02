@@ -6,19 +6,19 @@ import SeasonalPricing from "@/components/SeasonalPricing";
 import ContactUs from "@/components/ContactUsSection/ContactUs";
 import { useNavigate } from "@/utils/useNavigate";
 
-export default function GolfPackages() {
+export default function AnneOfGreenGables() {
   const navigate = useNavigate();
   return (
     <>
       <Metadata
-        title="Inn at the Pier | Golf Packages"
-        description="Inn at the Pier | Golf Packages"
-        keywords="Inn at the pier, Pier, Cavendish, Hotel, Accommodation, Restaurant, Bar, Golf, Packages, PEI"
+        title="Inn at the Pier | Anne of Green Gables"
+        description="Inn at the Pier | Anne of Green Gables"
+        keywords="Anne of green gables, Pier, Cavendish, Lucy Maud Montgomery, Bar, Golf, Packages, PEI"
       />
       <PageLayout>
         <div className="flex flex-col lg:!flex-row items-center lg:items-start">
           <div className="flex-[1] bg-white px-10 items-center justify-center">
-            <LetterText text="GOLF PACKAGES" letter="G" />
+            <LetterText text="Green Gables" letter="G" />
           </div>
           <div className="flex flex-col flex-[5] bg-white gap-[20px]">
             <Image
@@ -31,23 +31,25 @@ export default function GolfPackages() {
             <div>
               <div className="flex flex-col gap-8 my-8">
                 <SeasonalPricing
-                  preSeasonPrice={"1,199"}
-                  peakSeasonPrice={"1,499"}
+                  preSeasonPrice={"499"}
+                  peakSeasonPrice={"799"}
                   preSeasonText={"Off Season"}
+                  preSeasonDates={`June 1, 2025 - June 24, 2025 \n September 2, 2025 - October 14, 2025`}
                   peakSeasonText={"Peak Season"}
-                  preSeasonDates="Until June 22nd, 2025"
-                  peakSeasonDates="June 23rd, 2025 - October 5th, 2025"
+                  peakSeasonDates="June 25rd, 2025 - September 1st, 2025"
                   bullets={[
+                    "Green Gables Heritage Place",
+                    "Anne of Green Gables Museum",
+                    '"Anne & Gilbert" The Musical',
+                    "L.M. Montgomery's Birthplace",
+                    "Site of L.M. Montgomery's Cavendish Home",
+                    "Continental breakfast daily.",
                     {
                       onClick: () => {
                         navigate("standard-room");
                       },
-                      text: "5 nights standard accommodations",
+                      text: "Standard room (Queen Bed)",
                     },
-                    "4 rounds for 2 players",
-                    "Cart & range balls included",
-                    "Daily continental breakfast",
-                    "Access to all Cavendish Beach courses",
                   ]}
                 />
                 <ContactUs />

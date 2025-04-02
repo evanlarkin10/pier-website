@@ -7,7 +7,9 @@ const Rooms = () => {
     <div className="bg-white flex flex-col lg:!flex-row">
       <div className="flex flex-[1] min-w-[400px] bg-white">
         <div className="flex flex-col px-10 py-10 gap-10">
-          <Text variant="h4">WHY INN AT THE PIER?</Text>
+          <Text variant="h4" additionalClasses="text-center">
+            WHY INN AT THE PIER?
+          </Text>
           <Text variant="p">
             Explore the core of Prince Edward Island and the central hub of its
             northern coastline. This rural haven has unquestionably earned
@@ -28,7 +30,6 @@ const Rooms = () => {
               "Comfortable Stays",
               "Restaurant",
               "Bar",
-              "Water Sports",
               "24h Parking & Security",
               "Treaking",
             ]}

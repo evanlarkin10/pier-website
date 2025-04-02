@@ -4,6 +4,7 @@ import Text from "@/components/Text";
 import Metadata from "@/components/Metadata";
 import BulletList from "@/components/BulletList";
 import LetterText from "@/components/Headers/LetterText";
+import ContactUs from "@/components/ContactUsSection/ContactUs";
 
 export default function RomancePackages() {
   return (
@@ -24,7 +25,7 @@ export default function RomancePackages() {
               alt="Aerial Shot"
               height={350}
               width={850}
-              className="object-contain"
+              className="w-full max-h-[450px] object-cover"
             />
             <div>
               <Text variant="h3">3-Night Romance Package Includes:</Text>
@@ -69,6 +70,7 @@ export default function RomancePackages() {
                 />
               </div>
             </div>
+            <ContactUs />
           </div>
         </div>
       </PageLayout>

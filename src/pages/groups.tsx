@@ -24,7 +24,7 @@ export default function GolfPackages() {
               alt="Aerial Shot of the back of the Inn"
               height={350}
               width={850}
-              className="object-contain"
+              className="w-full max-h-[450px] object-cover"
             />
             <div>
               <Text variant="p">

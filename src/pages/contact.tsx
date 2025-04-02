@@ -4,17 +4,39 @@ import Text from "@/components/Text";
 import Metadata from "@/components/Metadata";
 import Button from "@/components/Button";
 import LetterText from "@/components/Headers/LetterText";
+import { ToastContainer, toast } from "react-toastify";
 
 export default function ContactUs() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const data = {
       name: formData.get("name"),
       email: formData.get("email"),
       message: formData.get("message"),
     };
-    console.log("Form data:", data);
+
+    fetch("/api/sendEmail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          toast("Email sent successfully!", { type: "success" });
+          form.reset();
+        } else {
+          toast("Error sending email", { type: "error" });
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        toast("Error sending email", { type: "error" });
+      });
   };
 
   return (
@@ -34,7 +56,7 @@ export default function ContactUs() {
               height={645}
             />
           </div>
-          <div className="flex flex-col flex-[1] text-left px-80">
+          <div className="flex flex-col flex-[1] text-left px-80 items-center sm:items-stretch">
             <div>
               <LetterText text="CONTACT US" letter="C" />
             </div>
@@ -72,6 +94,7 @@ export default function ContactUs() {
             </div>
           </div>
         </div>
+        <ToastContainer position="bottom-right" autoClose={3000} />
       </PageLayout>
     </>
   );

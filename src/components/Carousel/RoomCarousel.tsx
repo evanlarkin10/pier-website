@@ -7,21 +7,22 @@ const RoomCarousel = ({
   slides: { id: number; image: string }[];
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const length = slides.length;
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % 3);
+      setCurrentSlide((prev) => (prev + 1) % length);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [currentSlide]);
+  }, [currentSlide, length]);
 
   const changeSlide = (direction: "prev" | "next") => {
     setCurrentSlide((prev) => {
       if (direction === "prev") {
         return prev === 0 ? 2 : prev - 1;
       } else {
-        return (prev + 1) % 3;
+        return (prev + 1) % length;
       }
     });
   };

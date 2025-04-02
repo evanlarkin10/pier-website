@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://pier-website.vercel.app</loc><lastmod>2025-04-02T01:18:59.593Z</lastmod><changefreq>daily</changefreq><priority>1</priority></url>
+<url><loc>https://pier-website.vercel.app/about-us</loc><lastmod>2025-04-02T01:18:59.601Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://pier-website.vercel.app/anne-of-green-gables</loc><lastmod>2025-04-02T01:18:59.601Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://pier-website.vercel.app/contact</loc><lastmod>2025-04-02T01:18:59.601Z</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+<url><loc>https://pier-website.vercel.app/double-room</loc><lastmod>2025-04-02T01:18:59.601Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://pier-website.vercel.app/golf-packages</loc><lastmod>2025-04-02T01:18:59.601Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://pier-website.vercel.app/groups</loc><lastmod>2025-04-02T01:18:59.601Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://pier-website.vercel.app/junior-suite-room</loc><lastmod>2025-04-02T01:18:59.601Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://pier-website.vercel.app/romance-packages</loc><lastmod>2025-04-02T01:18:59.601Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://pier-website.vercel.app/rooms</loc><lastmod>2025-04-02T01:18:59.601Z</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>https://pier-website.vercel.app/standard-plus-room</loc><lastmod>2025-04-02T01:18:59.601Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://pier-website.vercel.app/standard-room</loc><lastmod>2025-04-02T01:18:59.601Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://pier-website.vercel.app/suite-room</loc><lastmod>2025-04-02T01:18:59.601Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://pier-website.vercel.app/wedding-events</loc><lastmod>2025-04-02T01:18:59.601Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>

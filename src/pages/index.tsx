@@ -29,7 +29,7 @@ export default function Home() {
               id: 3,
               image: "/slide-3.webp",
               title: "PACKAGES",
-              subtitle: "For Romance & Golf",
+              subtitle: "For Romance, Golf & More",
             },
           ]}
         />
