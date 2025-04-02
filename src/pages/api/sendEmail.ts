@@ -21,15 +21,27 @@ export default async function handler(
           },
         })
       : nodemailer.createTransport({
-          host: "register-smtp-oxcs.hostingplatform.com",
+          host: process.env.TRANSPORTER_SERVICE,
           port: 587, // Standard SMTP port for TLS
           secure: false, // true for 465, false for other ports
           auth: {
             user: process.env.TRANSPORTER_USER,
             pass: process.env.TRANSPORTER_PASS,
           },
+          tls: {
+            rejectUnauthorized: false, // Sometimes required for older SMTP servers
+          },
         });
 
+  console.log({
+    host: process.env.TRANSPORTER_SERVICE,
+    port: 587, // Standard SMTP port for TLS
+    secure: false, // true for 465, false for other ports
+    auth: {
+      user: process.env.TRANSPORTER_USER,
+      pass: process.env.TRANSPORTER_PASS,
+    },
+  });
   const mailOptions =
     process.env.APP_ENV === "development"
       ? {
