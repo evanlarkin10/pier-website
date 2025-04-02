@@ -31,8 +31,8 @@ export default function GolfPackages() {
             <div>
               <div className="flex flex-col gap-8 my-8">
                 <SeasonalPricing
-                  preSeasonPrice={"1,199"}
-                  peakSeasonPrice={"1,499"}
+                  preSeasonPrice={"1,499"}
+                  peakSeasonPrice={"1,900"}
                   preSeasonText={"Off Season"}
                   peakSeasonText={"Peak Season"}
                   preSeasonDates="Until June 22nd, 2025"

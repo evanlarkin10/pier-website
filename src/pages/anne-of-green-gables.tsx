@@ -22,10 +22,10 @@ export default function AnneOfGreenGables() {
           </div>
           <div className="flex flex-col flex-[5] bg-white gap-[20px]">
             <Image
-              src="/golf-aerial.webp"
+              src="/banner-LMM-culture.webp"
               alt="Aerial Shot of the golf course"
-              height={350}
-              width={850}
+              height={478}
+              width={1375}
               className="w-full max-h-[450px] object-cover"
             />
             <div>
