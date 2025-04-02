@@ -17,7 +17,7 @@ export default function Header({}: HeaderProps) {
       text: "About Us",
     },
     {
-      href: "/packages",
+      href: "/golf-packages",
       text: "Packages",
       subMenu: [
         { href: "/golf-packages", text: "Cavendish Beach Golf" },
