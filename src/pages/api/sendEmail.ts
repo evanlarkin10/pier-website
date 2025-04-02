@@ -54,7 +54,7 @@ export default async function handler(
       : {
           from: process.env.TRANSPORTER_USER, // Should use authenticated sender address
           to: process.env.TRANSPORTER_USER,
-          subject: `New Contact Form Submission from ${name}`,
+          subject: `Inn at the Pier Contact Form Submission from ${name}`,
           text: `From: ${name} <${email}>\n\n${message}`,
           replyTo: email,
         };
