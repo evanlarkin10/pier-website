@@ -3,14 +3,16 @@ import Image from "next/image";
 import Text from "@/components/Text";
 import Metadata from "@/components/Metadata";
 import LetterText from "@/components/Headers/LetterText";
+import { useNavigate } from "@/utils/useNavigate";
 
 export default function AboutUs() {
+  const navigate = useNavigate();
   return (
     <>
       <Metadata
         title="Inn at the Pier | About Us"
-        description="Inn at the Pier | About US"
-        keywords="Inn at the pier, Pier, Cavendish, Hotel, Accommodation, Restaurant, Bar, Beach, Family, Pet Friendly, Free Wifi, Free Parking, Free Breakfast"
+        description="Inn at the Pier | Learn about our story"
+        keywords="Inn at the pier, Pier, Cavendish, Hotel, Accommodation, Restaurant, Bar, Beach, story, about us"
       />
       <PageLayout>
         <div className="flex flex-col lg:!flex-row items-center lg:items-start">
@@ -41,32 +43,42 @@ export default function AboutUs() {
                 updates have been made since then. Our newly expanded waterside
                 outdoor patio is one of the few restaurant patios at the waters
                 edge in the Cavendish Resort area. There are 18 guest rooms all
-                with private baths, the guestrooms on the waterfront are
-                upgraded rooms (Suites/Jr. Suites & Standard Plus), all
+                with private bathrooms. The guestrooms on the waterfront are
+                upgraded rooms (Suites/Jr. Suites & Standard Plus), and all
                 guestrooms have mini-split heat pumps providing individual
                 climate control for heat and A/C. On site you can enjoy our
                 heated outdoor pool and hot tub, our restaurant (Island Chef at
-                The Pier) your host Chef Nish is returning for a second year
-                after a successful first year in 2023. Inn at The Pier is
-                located centrally on Prince Edward Island`s north shore making
-                day trips east or west convenient, Canada`s national park trails
-                and Cavendish beach is a short 5-minute drive as are all the
-                activities the resort area has to offer, we have several links
-                to nearby attractions , golf courses, points of interest and
-                restaurants throughout this website.
+                The Pier). Your host Chef Nish is returning for a third year
+                after successful firsts in 2023 and 2024.
               </Text>
               <br />
               <br />
               <Text variant="p">
-                Inn at The Pier offers group functions year-round limited only
-                by our size, meetings, family reunions, milestone birthdays and
-                weddings to name a few. We do host destination weddings, if you
-                are interested in getting married at Inn at The Pier there is a
-                few things you should know, weddings with more than 50 guests
-                that require a sit-down meal will require an outside tent rental
-                (around 5K extra), in most circumstances you will be required
-                the reserve all the guestrooms for a 3-night minimum. Check our
-                Packages Page
+                Inn at The Pier is located centrally on Prince Edward Island`s
+                north shore making day trips east or west convenient, Canada`s
+                national park trails and Cavendish beach is a short 5-minute
+                drive as are all the activities the resort area has to offer, we
+                have several links to nearby attractions , golf courses, points
+                of interest and restaurants throughout this website.
+              </Text>
+              <br />
+              <br />
+              <Text variant="p">
+                We offer group functions year-round limited only by our size -
+                meetings, family reunions, milestone birthdays and weddings to
+                name a few. We do host destination weddings, if guestlist is
+                over 50 people, a sitdown meal and tent rental is required (+
+                $5,000). In most circumstances, you will be required to reserve
+                all the guestrooms for a minimum 3-nights Check our&nbsp;
+                <span
+                  className="text-secondary cursor-pointer"
+                  onClick={() => {
+                    navigate("/wedding-events");
+                  }}
+                >
+                  Packages Page
+                </span>
+                &nbsp;for more information.
               </Text>
               <br />
               <br />

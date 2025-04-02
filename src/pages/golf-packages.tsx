@@ -13,7 +13,7 @@ export default function GolfPackages() {
       <Metadata
         title="Inn at the Pier | Golf Packages"
         description="Inn at the Pier | Golf Packages"
-        keywords="Inn at the pier, Pier, Cavendish, Hotel, Accommodation, Restaurant, Bar, Golf, Packages, PEI"
+        keywords="Golf, Pier, Cavendish, Hotel, Accommodation, Restaurant, Bar, Packages, PEI"
       />
       <PageLayout>
         <div className="flex flex-col lg:!flex-row items-center lg:items-start">

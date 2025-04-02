@@ -5,13 +5,13 @@ import Button from "@/components/Button";
 import { WEBREZ_BOOKING_URL } from "@/utils/constants";
 import LetterText from "@/components/Headers/LetterText";
 
-export default function GolfPackages() {
+export default function RoomOptions() {
   return (
     <>
       <Metadata
-        title="Inn at the Pier | About Us"
-        description="Inn at the Pier | About US"
-        keywords="Inn at the pier, Pier, Cavendish, Hotel, Accommodation, Restaurant, Bar, Beach, Family, Pet Friendly, Free Wifi, Free Parking, Free Breakfast"
+        title="Inn at the Pier | Rooms"
+        description="Inn at the Pier | Rooms"
+        keywords="Inn at the pier, Pier, Cavendish, Hotel, Accommodation, Rooms"
       />
       <PageLayout>
         <div className="flex flex-col lg:!flex-row items-center lg:items-start">
@@ -30,7 +30,7 @@ export default function GolfPackages() {
           <div className="flex flex-row flex-wrap flex-[5] bg-white gap-[10px]">
             <RoomDisplayStacked
               room_image="/standard-room.webp"
-              room_description="Our standard rooms have queen beds, they are not located on the waterfront side of the Inn. All our rooms have a private bath, Hair dryer, mini fridge, smart T.V with cable, mini-split heat/AC and free WiFi."
+              room_description="Our Standard Rooms feature comfortable queen-sized beds and are situated on the non-waterfront side of the Inn. Each room comes fully equipped with a private bathroom, hair dryer, mini-refrigerator, smart TV with cable programming, climate control (mini-split heating and air conditioning), and complimentary high-speed WiFi."
               room_type="Standard Room"
               room_image_height={227}
               room_image_width={369}
@@ -38,7 +38,7 @@ export default function GolfPackages() {
             />
             <RoomDisplayStacked
               room_image="/standard-plus-room.webp"
-              room_description="We have three standard plus rooms; one is suitable for a family and is equipped with a queen bed and 2 twin beds as well as a single sofa bed. The other two standard plus rooms are waterfront, but do not have patios. They have queen beds, mini fridge, private baths, hair dryers, cable/smart TV`s, mini-split heat and A/C with free WiFi."
+              room_description="Our Standard Plus rooms offer two distinct configurations. One family-oriented room features a queen bed, two twin beds, and a single sofa bed. The other two Standard Plus rooms provide waterfront views without patios. All rooms include a private bathroom, mini-refrigerator, hair dryer, smart TV with cable programming, climate control (mini-split heating and air conditioning), and complimentary high-speed WiFi."
               room_type="Standard Plus"
               room_image_height={227}
               room_image_width={369}
@@ -46,7 +46,7 @@ export default function GolfPackages() {
             />
             <RoomDisplayStacked
               room_image="/junior-suites-room.webp"
-              room_description="Jr suites have king or queen beds, three of the 4 Jr. Suites are waterfront with patios or decks. The Jr. suites are equipped with mini fridge, private baths, hair dryers, cable/smart TV`s, mini-split heat, and A/C with free Wi-Fi."
+              room_description="Our Junior Suites feature luxurious king or queen-sized beds, with three of the four suites offering stunning waterfront views and private patios or decks. Each suite is appointed with a mini-refrigerator, private bathroom, hair dryer, smart TV with cable programming, climate control (mini-split heating and air conditioning), and complimentary high-speed WiFi."
               room_type="Junior Suite"
               room_image_height={227}
               room_image_width={369}
@@ -54,7 +54,7 @@ export default function GolfPackages() {
             />
             <RoomDisplayStacked
               room_image="/suites-room.webp"
-              room_description="We have 4 suites, they are our most spacious rooms, they have king beds and a sofa-bed. All are waterfront with decks or patios. Mini fridge, private baths, hair dryers, cable/smart TV`s, mini-split heat and A/C with free Wi-Fi. There are 2different types of suites, one is a 2 room suite (Bedroom and sitting room) and the other two have a mini kitchen (no cooking, microwave, toaster fridge and sink)."
+              room_description="Our four premium Suites represent our most spacious accommodations, each featuring a king-sized bed and a comfortable sofa bed. All suites offer spectacular waterfront views with private decks or patios. Available in two configurations: a two-room layout (separate bedroom and sitting room) or enhanced suites with convenient kitchenettes (featuring a microwave, toaster, refrigerator, and sink). Each suite includes a private bathroom, hair dryer, smart TV with cable programming, climate control, and complimentary high-speed WiFi."
               room_type="Suite"
               room_image_height={227}
               room_image_width={369}
@@ -62,7 +62,7 @@ export default function GolfPackages() {
             />
             <RoomDisplayStacked
               room_image="/double-bed-room.webp"
-              room_description="Our double rooms are not on the waterfront side, they have two double beds with private bathrooms and all the room amenities common in our guestrooms. One is on the ground floor (with a patio) and two are on the second level. Our building does not have an elevator, but we try to have someone around to help with your bags if you need help. Our rates are based on 2 people per room with a 30.00 per/person charge over two guest."
+              room_description="Our Double Rooms, located on the non-waterfront side, feature two comfortable double beds and include all standard room amenities. One room is conveniently situated on the ground floor with a private patio, while two rooms are located on the second level. Please note that our property does not have an elevator, though assistance with luggage is available upon request. Base rates accommodate two guests, with an additional charge of $30 per person for extra occupants."
               room_type="Double Bed Room"
               room_image_height={227}
               room_image_width={369}
