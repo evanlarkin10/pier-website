@@ -1,2 +1,11 @@
-export const WEBREZ_BOOKING_URL =
-  "https://book.webrez.com/v31/#/property/2416/location/0/search";
+export const WEBREZ_BOOKING_URL = "https://secure.webrez.com/hotel/2416";
+export const WEBREZ_BOOKING_URL_JR_SUITE =
+  "https://secure.webrez.com/hotel/2416/?invtype_id=32973";
+export const WEBREZ_BOOKING_URL_DOUBLE =
+  "https://secure.webrez.com/hotel/2416/?invtype_id=32972";
+export const WEBREZ_BOOKING_URL_STD_PLUS =
+  "https://secure.webrez.com/hotel/2416/?invtype_id=32971";
+export const WEBREZ_BOOKING_URL_STD =
+  "https://secure.webrez.com/hotel/2416/?invtype_id=32970";
+export const WEBREZ_BOOKING_URL_SUITE =
+  "https://secure.webrez.com/hotel/2416/?invtype_id=32974";

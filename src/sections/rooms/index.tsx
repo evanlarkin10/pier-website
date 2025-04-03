@@ -10,12 +10,14 @@ export default function RoomPage({
   roomType,
   images,
   bullets,
+  bookingUrl = WEBREZ_BOOKING_URL,
   infoComponent: InfoComponent,
 }: {
   roomType: string;
   roomLetter: string;
   images: string[];
   bullets: string[];
+  bookingUrl?: string;
   infoComponent: React.ReactNode;
 }) {
   return (
@@ -28,7 +30,7 @@ export default function RoomPage({
         <BulletList items={bullets} />
         <Button
           text="Book Now"
-          onClick={() => window.open(WEBREZ_BOOKING_URL, "_blank")}
+          onClick={() => window.open(bookingUrl, "_blank")}
           additionalClasses="mt-10"
         />
       </div>

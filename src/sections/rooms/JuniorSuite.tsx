@@ -2,6 +2,7 @@ import Text from "@/components/Text";
 import RoomPage from ".";
 import Price from "@/components/Price";
 import BulletList from "@/components/BulletList";
+import { WEBREZ_BOOKING_URL_JR_SUITE } from "@/utils/constants";
 
 export default function JuniorSuiteRoom() {
   return (
@@ -26,6 +27,7 @@ export default function JuniorSuiteRoom() {
         "Hair Dryer",
         "Fridge",
       ]}
+      bookingUrl={WEBREZ_BOOKING_URL_JR_SUITE}
       infoComponent={
         <>
           <div>

@@ -1,6 +1,7 @@
 import Text from "@/components/Text";
 import RoomPage from ".";
 import Price from "@/components/Price";
+import { WEBREZ_BOOKING_URL_SUITE } from "@/utils/constants";
 
 export default function SuiteRoom() {
   return (
@@ -25,6 +26,7 @@ export default function SuiteRoom() {
         "Hair Dryer",
         "Fridge",
       ]}
+      bookingUrl={WEBREZ_BOOKING_URL_SUITE}
       infoComponent={
         <>
           <div>
