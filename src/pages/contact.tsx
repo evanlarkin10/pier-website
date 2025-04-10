@@ -5,8 +5,25 @@ import Metadata from "@/components/Metadata";
 import Button from "@/components/Button";
 import LetterText from "@/components/Headers/LetterText";
 import { ToastContainer, toast } from "react-toastify";
+import { useState } from "react";
 
 export default function ContactUs() {
+  const [emailError, setEmailError] = useState("");
+
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleEmailBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    const email = e.target.value;
+    if (!validateEmail(email)) {
+      setEmailError("Please enter a valid email address");
+    } else {
+      setEmailError("");
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -70,13 +87,21 @@ export default function ContactUs() {
                   className="p-2 border rounded"
                   required
                 />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  className="p-2 border rounded"
-                  required
-                />
+                <div className="flex flex-col gap-1">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    className={`p-2 border rounded ${
+                      emailError ? "border-red-500" : ""
+                    }`}
+                    required
+                    onBlur={handleEmailBlur}
+                  />
+                  {emailError && (
+                    <span className="text-red-500 text-sm">{emailError}</span>
+                  )}
+                </div>
                 <textarea
                   name="message"
                   placeholder="Message"
