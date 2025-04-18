@@ -41,14 +41,16 @@ const RoomDisplay = ({
           <Text variant="link">See More</Text>
         </span>
       </div>
-      <Image
-        src={room_image}
-        alt={room_type}
-        height={room_image_height}
-        width={room_image_width}
-        className="flex flex-[1] object-contain shadow-xl"
-        draggable={false}
-      />
+      <div className="flex flex-[1]">
+        <Image
+          src={room_image}
+          alt={room_type}
+          height={room_image_height}
+          width={room_image_width}
+          className="flex flex-[1] object-contain w-full"
+          draggable={false}
+        />
+      </div>
     </div>
   );
 };
