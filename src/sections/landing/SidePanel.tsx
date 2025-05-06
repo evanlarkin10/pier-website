@@ -27,7 +27,6 @@ const SidePanel = () => {
           "Restaurant",
           "Bar",
           "24h Parking & Security",
-          "Treaking",
         ]}
       />
       <InstaPanel />
