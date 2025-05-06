@@ -59,10 +59,14 @@ const InstaPanel = () => {
                       </svg>
                     </div>
                     <div className="relative aspect-square">
-                      <Image
+                      <img
                         src={post.media_url}
                         alt={`Instagram post from ${post.timestamp}`}
-                        fill
+                        style={{
+                          height: "100%",
+                          width: "100%",
+                          objectFit: "cover",
+                        }}
                         className="object-cover"
                       />
                     </div>
