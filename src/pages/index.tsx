@@ -4,10 +4,45 @@ import Rooms from "@/sections/landing/Rooms";
 import MoreOptions from "@/sections/landing/MoreOptions";
 import Text from "@/components/Text";
 import SidePanel from "@/sections/landing/SidePanel";
+import { createContext } from "react";
 
-export default function Home() {
+export async function getStaticProps() {
+  // Replace these with your Instagram Business Account credentials
+  const ACCESS_TOKEN = process.env.NEXT_PUBLIC_INSTAGRAM_ACCESS_TOKEN;
+  const BUSINESS_ACCOUNT_ID = process.env.NEXT_PUBLIC_INSTAGRAM_ACCOUNT_ID;
+
+  const response = await fetch(
+    `https://graph.instagram.com/${BUSINESS_ACCOUNT_ID}/media?fields=id,media_url,permalink,timestamp,caption&access_token=${ACCESS_TOKEN}&limit=3`
+  );
+  const data = await response.json();
+
+  return {
+    props: {
+      insta_images: data.data,
+    },
+    revalidate: 3600, // Rebuild every hour
+  };
+}
+
+export const HomePageContext = createContext<{ insta_images: InstagramPost[] }>(
+  { insta_images: [] }
+);
+
+interface InstagramPost {
+  id: string;
+  media_url: string;
+  permalink: string;
+  timestamp: string;
+  caption: string;
+}
+
+export default function Home({
+  insta_images,
+}: {
+  insta_images: InstagramPost[];
+}) {
   return (
-    <>
+    <HomePageContext.Provider value={{ insta_images }}>
       <Metadata
         title="Inn at the Pier | Prince Edward Island"
         description="Inn at the Pier | Prince Edward Island"
@@ -45,6 +80,6 @@ export default function Home() {
           <SidePanel />
         </div>
       </div>
-    </>
+    </HomePageContext.Provider>
   );
 }

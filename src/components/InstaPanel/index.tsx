@@ -1,47 +1,20 @@
-import { useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import Image from "next/image";
 //import styles from "./InstaPanel.module.css";
 import Text from "../Text";
-
-interface InstagramPost {
-  id: string;
-  media_url: string;
-  permalink: string;
-  timestamp: string;
-  caption: string;
-}
+import { HomePageContext } from "@/pages";
 
 //curl -X GET "https://graph.instagram.com/9538952662806844/media?fields=id,caption,media_type,media_url,permalink,timestamp&access_token=IGAAJuXPCtwlZABZAE01MFk3YlREaUhfYUhTa3pmWFQxeEQzU1BMVjF0OEotNWo4ejdubmNjbXJncHZAGbFRBSFNJdTI1eU1vRXlHYXFYWUxmaHJzRHV0ajZAZAMTZAYTXZAIV19yLW0zbVFMclRocnc1WkQ4aWd4S3JLcnBwNmpTQlZAOZAwZDZD&limit=1"
 const InstaPanel = () => {
-  const [posts, setPosts] = useState<InstagramPost[]>([]);
+  const { insta_images } = useContext(HomePageContext);
+
   const [expandedCaptions, setExpandedCaptions] = useState<Set<string>>(
     new Set()
   );
 
-  // Replace these with your Instagram Business Account credentials
-  const ACCESS_TOKEN = process.env.NEXT_PUBLIC_INSTAGRAM_ACCESS_TOKEN;
-  const BUSINESS_ACCOUNT_ID = process.env.NEXT_PUBLIC_INSTAGRAM_ACCOUNT_ID;
-
-  useEffect(() => {
-    const fetchInstagramPosts = async () => {
-      try {
-        const response = await fetch(
-          `https://graph.instagram.com/${BUSINESS_ACCOUNT_ID}/media?fields=id,media_url,permalink,timestamp,caption&access_token=${ACCESS_TOKEN}&limit=3`
-        );
-        const data = await response.json();
-        console.log(data);
-        setPosts(data.data);
-      } catch (error) {
-        console.error("Error fetching Instagram posts:", error);
-      }
-    };
-
-    fetchInstagramPosts();
-  }, [ACCESS_TOKEN, BUSINESS_ACCOUNT_ID]);
-
   return (
     <>
-      {!!posts.length && (
+      {!!insta_images?.length && (
         <div className="flex flex-col gap-0">
           <div className="flex flex-col gap-2 text-center">
             <Text variant="h4" additionalClasses="text-center">
@@ -53,7 +26,7 @@ const InstaPanel = () => {
           </div>
           <div className="w-full max-w-md mx-auto p-4">
             <div className="grid grid-cols-1 gap-4">
-              {posts.map((post) => (
+              {insta_images.map((post) => (
                 <a
                   key={post.id}
                   href="https://www.instagram.com/innatthepier" // Replace with your Instagram profile URL
