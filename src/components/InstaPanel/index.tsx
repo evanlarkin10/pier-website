@@ -42,7 +42,7 @@ const InstaPanel = () => {
   return (
     <>
       {!!posts.length && (
-        <>
+        <div className="flex flex-col gap-0">
           <div className="flex flex-col gap-2 text-center">
             <Text variant="h4" additionalClasses="text-center">
               What&apos;s New?
@@ -145,7 +145,7 @@ const InstaPanel = () => {
               ))}
             </div>
           </div>
-        </>
+        </div>
       )}
     </>
   );

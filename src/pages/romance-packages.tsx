@@ -4,7 +4,8 @@ import Text from "@/components/Text";
 import Metadata from "@/components/Metadata";
 import BulletList from "@/components/BulletList";
 import LetterText from "@/components/Headers/LetterText";
-import ContactUs from "@/components/ContactUsSection/ContactUs";
+import Button from "@/components/Button";
+import { WEBREZ_BOOKING_URL } from "@/utils/constants";
 
 export default function RomancePackages() {
   return (
@@ -70,7 +71,14 @@ export default function RomancePackages() {
                 />
               </div>
             </div>
-            <ContactUs />
+            <Button
+              text="Book Now"
+              color="primary"
+              variant="solid"
+              additionalClasses="w-fit self-center"
+              size="lg"
+              onClick={() => window.open(WEBREZ_BOOKING_URL, "_blank")}
+            />
           </div>
         </div>
       </PageLayout>

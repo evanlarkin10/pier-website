@@ -3,8 +3,9 @@ import Image from "next/image";
 import Metadata from "@/components/Metadata";
 import LetterText from "@/components/Headers/LetterText";
 import SeasonalPricing from "@/components/SeasonalPricing";
-import ContactUs from "@/components/ContactUsSection/ContactUs";
 import { useNavigate } from "@/utils/useNavigate";
+import Button from "@/components/Button";
+import { WEBREZ_BOOKING_URL } from "@/utils/constants";
 
 export default function GolfPackages() {
   const navigate = useNavigate();
@@ -50,7 +51,14 @@ export default function GolfPackages() {
                     "Access to all Cavendish Beach courses",
                   ]}
                 />
-                <ContactUs />
+                <Button
+                  text="Book Now"
+                  color="primary"
+                  variant="solid"
+                  additionalClasses="w-fit self-center"
+                  size="lg"
+                  onClick={() => window.open(WEBREZ_BOOKING_URL, "_blank")}
+                />
               </div>
             </div>
           </div>
