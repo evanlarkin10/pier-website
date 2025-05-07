@@ -12,7 +12,7 @@ export async function getStaticProps() {
   const BUSINESS_ACCOUNT_ID = process.env.NEXT_PUBLIC_INSTAGRAM_ACCOUNT_ID;
 
   const response = await fetch(
-    `https://graph.instagram.com/${BUSINESS_ACCOUNT_ID}/media?fields=id,media_url,permalink,timestamp,caption&access_token=${ACCESS_TOKEN}&limit=3`
+    `https://graph.instagram.com/${BUSINESS_ACCOUNT_ID}/media?fields=id,media_url,media_type,permalink,timestamp,caption&access_token=${ACCESS_TOKEN}&limit=3`
   );
   const data = await response.json();
 
@@ -31,6 +31,7 @@ export const HomePageContext = createContext<{ insta_images: InstagramPost[] }>(
 interface InstagramPost {
   id: string;
   media_url: string;
+  media_type: string;
   permalink: string;
   timestamp: string;
   caption: string;

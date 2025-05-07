@@ -59,16 +59,34 @@ const InstaPanel = () => {
                       </svg>
                     </div>
                     <div className="relative aspect-square">
-                      <img
-                        src={post.media_url}
-                        alt={`Instagram post from ${post.timestamp}`}
-                        style={{
-                          height: "100%",
-                          width: "100%",
-                          objectFit: "cover",
-                        }}
-                        className="object-cover"
-                      />
+                      {post.media_type === "VIDEO" ? (
+                        <video
+                          src={post.media_url}
+                          muted
+                          autoPlay
+                          loop
+                          playsInline
+                          style={{
+                            height: "100%",
+                            width: "100%",
+                            objectFit: "cover",
+                          }}
+                          className="object-cover"
+                        >
+                          Your browser does not support the video tag.
+                        </video>
+                      ) : (
+                        <img
+                          src={post.media_url}
+                          alt={`Instagram post from ${post.timestamp}`}
+                          style={{
+                            height: "100%",
+                            width: "100%",
+                            objectFit: "cover",
+                          }}
+                          className="object-cover"
+                        />
+                      )}
                     </div>
                     <div className="p-3">
                       <div>
