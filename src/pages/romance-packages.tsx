@@ -1,11 +1,10 @@
 import PageLayout from "@/components/Layouts/PageLayout";
 import Image from "next/image";
-import Text from "@/components/Text";
 import Metadata from "@/components/Metadata";
-import BulletList from "@/components/BulletList";
 import LetterText from "@/components/Headers/LetterText";
 import Button from "@/components/Button";
 import { WEBREZ_BOOKING_URL } from "@/utils/constants";
+import SeasonalPricing from "@/components/SeasonalPricing";
 
 export default function RomancePackages() {
   return (
@@ -28,20 +27,23 @@ export default function RomancePackages() {
               width={850}
               className="w-full max-h-[450px] object-cover"
             />
-            <div>
-              <Text variant="h3">3-Night Romance Package Includes:</Text>
-              <br />
-              <BulletList
-                items={[
-                  "3 Nights waterfront Deluxe Room",
-                  "Morning Kayak or Paddle Board Rental (2 X 2hrs included)",
-                  '$50.00 coupon for "Island Chef at The Pier" .on site restaurant',
-                  "Heated outdoor pool and Hot Tub",
-                  "Robes provided for your comfort",
-                  "Waterside fire pit available",
-                ]}
-              />
-            </div>
+
+            <SeasonalPricing
+              preSeasonPrice={"719.99"}
+              peakSeasonPrice={"959.00"}
+              preSeasonText={"Off Season"}
+              preSeasonDates={`Until June 22, 2025`}
+              peakSeasonText={"Peak Season"}
+              peakSeasonDates="June 23rd, 2025 - October 5th, 2025"
+              bullets={[
+                "3 Nights waterfront Deluxe Room",
+                "Morning Kayak or Paddle Board Rental (2 X 2hrs included)",
+                '$50.00 coupon for "Island Chef at The Pier" .on site restaurant',
+                "Heated outdoor pool and Hot Tub",
+                "Robes provided for your comfort",
+                "Waterside fire pit available",
+              ]}
+            />
             <div className="flex flex-col sm:!flex-row gap-3">
               <div className="flex-[1]">
                 <Image
