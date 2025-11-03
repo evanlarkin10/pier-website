@@ -35,7 +35,7 @@ export default function Header({}: HeaderProps) {
       ],
     },
     {
-      href: "https://islandchefatthepier.ca/",
+      href: "/dining",
       text: "Dining",
     },
     { href: "/contact", text: "Contact" },
