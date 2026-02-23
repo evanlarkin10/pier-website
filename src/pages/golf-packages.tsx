@@ -32,12 +32,12 @@ export default function GolfPackages() {
             <div>
               <div className="flex flex-col gap-8 my-8">
                 <SeasonalPricing
-                  preSeasonPrice={"1,499"}
-                  peakSeasonPrice={"1,900"}
+                  preSeasonPrice={"1,699"}
+                  peakSeasonPrice={"2,299"}
                   preSeasonText={"Off Season"}
                   peakSeasonText={"Peak Season"}
-                  preSeasonDates="Until June 22nd, 2025"
-                  peakSeasonDates="June 23rd, 2025 - October 5th, 2025"
+                  preSeasonDates="Until June 22nd, 2026"
+                  peakSeasonDates="June 23rd, 2026 - October 5th, 2026"
                   bullets={[
                     {
                       onClick: () => {

@@ -18,7 +18,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      insta_images: data.data,
+      insta_images: data.data || [],
     },
     revalidate: 3600, // Rebuild every hour
   };
