@@ -20,8 +20,7 @@ export default function StandardPlusRoom() {
         "Coffee Maker",
         "Individual heat and A/C",
         "Electronic keys with 24 hour access",
-        "Access to washer & dryer ($)",
-        "Heat outdoor pool & hot tub",
+        "Heated outdoor pool",
         "Smart TV`s",
         "Hair Dryer",
         "Fridge",
@@ -35,7 +34,8 @@ export default function StandardPlusRoom() {
                 <Text variant="h3" additionalClasses="mb-3">
                   Standard Plus &nbsp;
                   <Price
-                    price="169"
+                    price="189"
+                    from
                     additionalClasses="text-secondary font-notoSerif"
                   />
                 </Text>

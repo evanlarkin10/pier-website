@@ -44,24 +44,13 @@ export default function WeddingEvents() {
                 them individually or you may want to host the complete event, we
                 can help you make it all happen.
               </Text>
-              <br />
+                      <br />
               <br />
               <Text variant="p">
-                If you are planning a destination wedding, this is the place for
-                you. Up to 40 of your friends and family can stay and celebrate
+                Up to 40 of your friends and family can stay and celebrate
                 your wedding and enjoy an Island holiday. Friends, family, and
                 your wedding party can arrange their own arrival and departure
                 dates directly with us, you simply give us the guest list.
-              </Text>
-              <br />
-              <br />
-              <Text variant="p">
-                Chef “Nish” will help you with your menu ideas and look after
-                all the details of your special banquet. Special meal requests
-                for sensitive diets can be handled with ease. If you are
-                considering a destination wedding, we can set up a convenient
-                time to call and discuss. Please visit the following link to
-                schedule appointmnts with Chef Nish “Island Chef at The Pier” .
               </Text>
               <br />
               <br />
@@ -69,9 +58,7 @@ export default function WeddingEvents() {
               <br />
               <Text variant="p">
                 Introducing our elegant wedding package, starting at $5500 for
-                up to 30 guests(additional person at extra$$). To book an
-                appointment with Chef Nish, please follow the link below: Island
-                Chef at the Pier
+                up to 30 guests (additional person at extra$$).
               </Text>
               <br />
               <br />
@@ -79,11 +66,8 @@ export default function WeddingEvents() {
               <br />
               <Text variant="p">
                 We have 18 guestrooms, a 30-seat dining room, large waterside
-                patio (partially enclosed), full-service kitchen, heated outdoor
-                pool and hot tub, available year-round (advance reservation
-                required October through May). We can host your group, business
-                or pleasure, something as simple as an overnight stay with
-                dinner or a multi-day professional retreat.
+                patio (partially enclosed), full-service kitchen, and heated
+                outdoor pool.
               </Text>
             </div>
             <div className="flex flex-col sm:!flex-row gap-3">

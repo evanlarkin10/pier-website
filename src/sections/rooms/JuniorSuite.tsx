@@ -21,8 +21,7 @@ export default function JuniorSuiteRoom() {
         "Coffee Maker",
         "Individual heat and A/C",
         "Electronic keys with 24 hour access",
-        "Access to washer & dryer ($)",
-        "Heat outdoor pool & hot tub",
+        "Heated outdoor pool",
         "Smart TV`s",
         "Hair Dryer",
         "Fridge",
@@ -36,7 +35,8 @@ export default function JuniorSuiteRoom() {
                 <Text variant="h3" additionalClasses="mb-3">
                   Junior Suite &nbsp;
                   <Price
-                    price="199"
+                    price="229"
+                    from
                     additionalClasses="text-secondary font-notoSerif"
                   />
                 </Text>

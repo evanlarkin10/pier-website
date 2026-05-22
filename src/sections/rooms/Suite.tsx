@@ -20,8 +20,7 @@ export default function SuiteRoom() {
         "Coffee Maker",
         "Individual heat and A/C",
         "Electronic keys with 24 hour access",
-        "Access to washer & dryer ($)",
-        "Heat outdoor pool & hot tub",
+        "Heated outdoor pool",
         "Smart TV`s",
         "Hair Dryer",
         "Fridge",
@@ -35,7 +34,8 @@ export default function SuiteRoom() {
                 <Text variant="h3" additionalClasses="mb-3">
                   Suites &nbsp;
                   <Price
-                    price="229"
+                    price="259"
+                    from
                     additionalClasses="text-secondary font-notoSerif"
                   />
                 </Text>
