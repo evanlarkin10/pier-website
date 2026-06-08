@@ -67,7 +67,7 @@ const Carousel = ({
       <div className="absolute bottom-64 left-1/2 transform -translate-x-1/2">
         <Button
           size="lg"
-          color="tertiary"
+          color="primary"
           variant="solid"
           text="Book Now"
           onClick={() => window.open(WEBREZ_BOOKING_URL, "_blank")}

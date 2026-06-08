@@ -41,42 +41,46 @@ export default function Header({}: HeaderProps) {
   ];
 
   return (
-    <header className="top-0 sticky z-[2] h-48 bg-primary flex items-center px-8">
+    <header className="top-0 sticky z-[2] h-48 bg-white shadow-sm flex items-center px-8">
       <div
-        className="relative -bottom-6 min-w-[215px]"
+        className="relative -bottom-6 min-w-[120px]"
         onClick={() => {
           navigate("/");
         }}
       >
         <Image
-          src="/logo.webp"
-          alt="Inn at the Pier"
-          width={215}
-          height={111}
-          className="!w-[215px] !h-[111px] shrink-0 mt-4 cursor-pointer"
+          src="/cavendishmarinainn.jpg"
+          alt="Cavendish Marina Inn"
+          width={120}
+          height={120}
+          className="!w-[120px] !h-[120px] shrink-0 mt-2 cursor-pointer rounded-sm"
           draggable={false}
+        />
+        <div
+          className="absolute -inset-0.5 rounded-sm border-2 border-gray-200 pointer-events-none"
+          style={{ clipPath: "polygon(0 50%, 100% 50%, 100% 100%, 0 100%)" }}
         />
       </div>
 
       {/* Desktop Navigation */}
       <nav
-        className={`hidden lg:flex gap-8 text-white w-full justify-evenly text-nowrap`}
+        className={`hidden lg:flex gap-8 text-primary w-full justify-evenly text-nowrap`}
       >
         {navLinks.map((link) => (
           <div key={link.href} className="relative group">
             <a
               href={link.href}
-              className="hover:text-gray-200 transition-colors"
+              className="hover:text-primary/60 transition-colors"
             >
               {link.text}
             </a>
             {link.subMenu && (
-              <div className="absolute hidden group-hover:block top-full left-0 bg-primary min-w-[200px] py-2 shadow-lg">
+              <div className="absolute hidden group-hover:block top-full left-0 bg-white min-w-[200px] py-2 shadow-lg border border-gray-100">
                 {link.subMenu.map((subItem) => (
                   <a
                     key={subItem.href}
                     href={subItem.href}
-                    className="block px-4 py-2 text-white hover:bg-primary-dark transition-colors"
+                    className="block px-4 py-2 text-primary hover:bg-foreground transition-colors"
                   >
                     {subItem.text}
                   </a>
@@ -89,7 +93,7 @@ export default function Header({}: HeaderProps) {
 
       {/* Hamburger Menu Button */}
       <button
-        className="lg:hidden ml-auto text-white"
+        className="lg:hidden ml-auto text-primary"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
       >
         <svg
@@ -119,9 +123,9 @@ export default function Header({}: HeaderProps) {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <nav className="lg:hidden fixed top-0 left-0 right-0 bg-primary flex flex-col items-center py-4 z-[999] h-screen">
+        <nav className="lg:hidden fixed top-0 left-0 right-0 bg-white flex flex-col items-center py-4 z-[999] h-screen">
           <button
-            className="absolute top-4 right-8 text-white"
+            className="absolute top-4 right-8 text-primary"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             <svg
@@ -140,7 +144,7 @@ export default function Header({}: HeaderProps) {
           {activeSubmenu ? (
             <div className="w-full">
               <button
-                className="text-white py-2 px-4 flex items-center"
+                className="text-primary py-2 px-4 flex items-center"
                 onClick={() => setActiveSubmenu(null)}
               >
                 <svg
@@ -162,7 +166,7 @@ export default function Header({}: HeaderProps) {
                   <a
                     key={subItem.href}
                     href={subItem.href}
-                    className="text-white py-2 px-8 block hover:bg-primary-dark"
+                    className="text-primary py-2 px-8 block hover:bg-foreground"
                   >
                     {subItem.text}
                   </a>
@@ -174,7 +178,7 @@ export default function Header({}: HeaderProps) {
                 {link.subMenu ? (
                   <button
                     onClick={() => setActiveSubmenu(link.href)}
-                    className="text-white py-2 w-full hover:bg-primary-dark flex items-center justify-center"
+                    className="text-primary py-2 w-full hover:bg-foreground flex items-center justify-center"
                   >
                     {link.text}
                     <svg
@@ -192,7 +196,7 @@ export default function Header({}: HeaderProps) {
                 ) : (
                   <a
                     href={link.href}
-                    className="text-white py-2 block hover:bg-primary-dark"
+                    className="text-primary py-2 block hover:bg-foreground"
                   >
                     {link.text}
                   </a>

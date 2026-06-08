@@ -16,7 +16,7 @@ export default function BulletList({ items }: BulletListProps) {
         const key = text.trim();
 
         const baseClassName =
-          "flex font-inter items-center gap-2 before:content-[''] before:block before:min-w-4 before:min-h-4 before:w-4 before:h-4 before:bg-[url('/list-check.png')] before:bg-contain before:bg-no-repeat before:bg-center";
+          "bullet-check flex font-inter items-center gap-2";
 
         if (typeof item === "string") {
           return (

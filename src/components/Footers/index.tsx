@@ -3,7 +3,7 @@ interface FooterProps {}
 
 export default function Footer({}: FooterProps) {
   return (
-    <footer className="bg-primary p-10">
+    <footer className="bg-foreground p-10">
       <div className="flex flex-col sm:flex-row justify-between gap-10 sm:gap-0">
         <div className="flex flex-col flex-[1] sm:border-r-2 sm:border-secondary px-10">
           <Text
@@ -87,7 +87,7 @@ export default function Footer({}: FooterProps) {
             width="40"
             height="40"
             viewBox="0 0 50 50"
-            fill="#a29061"
+            fill="#012f59"
             onClick={() =>
               window.open("https://www.instagram.com/innatthepier", "_blank")
             }
@@ -103,7 +103,7 @@ export default function Footer({}: FooterProps) {
             width="40"
             height="40"
             viewBox="0 0 50 50"
-            fill="#a29061"
+            fill="#012f59"
             onClick={() =>
               window.open("https://www.facebook.com/InnatthePier/", "_blank")
             }
@@ -114,7 +114,7 @@ export default function Footer({}: FooterProps) {
         </div>
       </div>
       <div className="flex flex-col border-t border-secondary text-right text-secondary py-2">
-        © Inn At The Pier 2025
+        © Inn At The Pier 2026
       </div>
     </footer>
   );
