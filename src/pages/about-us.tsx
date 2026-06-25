@@ -47,9 +47,7 @@ export default function AboutUs() {
                 upgraded rooms (Suites/Jr. Suites & Standard Plus), and all
                 guestrooms have mini-split heat pumps providing individual
                 climate control for heat and A/C. On site you can enjoy our
-                heated outdoor pool and hot tub, our restaurant (Island Chef at
-                The Pier). Your host Chef Nish is returning for a third year
-                after successful firsts in 2023 and 2024.
+                heated outdoor pool and restaurant (Island Favorites).
               </Text>
               <br />
               <br />

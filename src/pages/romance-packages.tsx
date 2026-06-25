@@ -39,7 +39,7 @@ export default function RomancePackages() {
                 "3 Nights waterfront Deluxe Room",
                 "Morning Kayak or Paddle Board Rental (2 X 2hrs included)",
                 '$50.00 coupon for "Island Chef at The Pier" .on site restaurant',
-                "Heated outdoor pool and Hot Tub",
+                "Heated outdoor pool",
                 "Robes provided for your comfort",
                 "Waterside fire pit available",
               ]}
