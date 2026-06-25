@@ -38,7 +38,7 @@ export default function RomancePackages() {
               bullets={[
                 "3 Nights waterfront Deluxe Room",
                 "Morning Kayak or Paddle Board Rental (2 X 2hrs included)",
-                '$50.00 coupon for "Island Chef at The Pier" .on site restaurant',
+                '$50.00 coupon for "Island Favorites" on-site restaurant',
                 "Heated outdoor pool",
                 "Robes provided for your comfort",
                 "Waterside fire pit available",
